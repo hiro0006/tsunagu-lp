@@ -12,13 +12,17 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        /* メインコンテンツを中央に配置するためのスタイル */
+        .container {
+            max-width: 1024px; /* 最大幅を設定（md:text-5xlなどに合わせて調整） */
+        }
     </style>
 </head>
-<body>
+<body class="bg-gray-100">
     <!-- LPのヘッダーセクション -->
     <header class="bg-blue-600 text-white p-6 text-center rounded-b-lg shadow-lg">
         <h1 class="text-3xl md:text-5xl font-bold mb-2 leading-tight">
-            夏季の波動、新店増減に悩む食品問屋の所長へ、または経営者様へ。
+            夏季の波動、新店増減に悩む食品問屋の所長・社長へ。
         </h1>
         <p class="text-xl md:text-2xl mb-4 leading-relaxed">
             机上の空論は終わり。元食品問屋が現場で培った『生きたノウハウ』と『ハイブリッド物流』の秘策で、
@@ -37,7 +41,7 @@
         </section>
 
         <!-- ターゲットの「痛み」の明確化 -->
-        <section class="my-12 p-6 bg-gray-50 rounded-lg shadow-md">
+        <section class="my-12 p-6 bg-white rounded-lg shadow-md">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
                 もしかして、こんなお悩み抱えていませんか？
             </h2>
@@ -85,9 +89,11 @@
                 代表メッセージ：なぜ、私が物流コンサルを始めたのか
             </h2>
             <div class="text-center mb-4">
-                <!-- 代表者様の動画を埋め込む場合はここにiframeなどを配置 -->
-                <!-- <iframe width="560" height="315" src="【代表者様の動画URL】" frameborder="0" allowfullscreen class="w-full max-w-xl mx-auto rounded-lg shadow-lg"></iframe> -->
-                <img src="https://placehold.co/600x300/e0e0e0/333333?text=代表者様の動画イメージ" alt="代表者様の動画イメージ" class="w-full max-w-xl mx-auto rounded-lg shadow-lg">
+                <!-- ここに代表者様の動画を埋め込むか、画像を配置してください。 -->
+                <!-- 例1: YouTube動画の埋め込み -->
+                <!-- <iframe width="560" height="315" src="【代表者様のYouTube動画URL】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full max-w-xl mx-auto rounded-lg shadow-lg"></iframe> -->
+                <!-- 例2: 画像の配置 -->
+                <img src="https://placehold.co/600x338/e0e0e0/333333?text=代表者様の動画または画像" alt="代表者様の動画または画像" class="w-full max-w-xl mx-auto rounded-lg shadow-lg">
             </div>
             <p class="text-lg text-gray-700">
                 私自身、かつて食品問屋の現場で、物流の苦悩を経験してきました。夏季のアイス配送でドライバーが足りず、夜遅くまで自らハンドルを握ったこともあります。物流コストの高騰に頭を抱え、どうすれば利益を確保できるのか、眠れない夜を過ごしたことも一度や二度ではありません。
