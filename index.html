@@ -4,58 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式会社TSUNAGU | 攻めの物流コンサルティング</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSSファイルを読み込む -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter (for a clean, professional look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Tailwind CSSをCDNで読み込む */
-        @import url("https://cdn.tailwindcss.com");
+        /* Base styles for the body */
         body {
             font-family: 'Inter', sans-serif;
-            /* 全体の背景色 */
-            background-color: #f3f4f6; /* bg-gray-100 */
+            background-color: #f3f4f6; /* Light gray background, matching corporate feel */
+            color: #374151; /* Dark gray text for readability */
         }
-        /* メインコンテンツとヘッダー、フッターを中央に配置するためのスタイル */
+        /* Container for central alignment and max-width */
         .container-centered {
-            max-width: 1024px; /* 最大幅を設定 */
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem; /* p-4 md:p-8 に合わせて調整 */
-            padding-right: 1rem; /* p-4 md:p-8 に合わせて調整 */
+            max-width: 1024px; /* Max width for content, consistent with LP design principles */
+            margin-left: auto; /* Center alignment */
+            margin-right: auto; /* Center alignment */
+            padding-left: 1rem; /* Default padding for smaller screens */
+            padding-right: 1rem; /* Default padding for smaller screens */
         }
-        /* レスポンシブなパディング調整 */
-        @media (min-width: 768px) { /* md breakpoint */
+        /* Responsive padding adjustment for medium screens and up */
+        @media (min-width: 768px) { /* md breakpoint in Tailwind */
             .container-centered {
                 padding-left: 2rem;
                 padding-right: 2rem;
             }
         }
+        /* Styling for the main CTA button */
+        .cta-button {
+            background-color: #10b981; /* Green accent color for high visibility */
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 9999px; /* Fully rounded for a modern look */
+            font-weight: 700; /* Bold text */
+            display: inline-block; /* Allows padding and margin */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        .cta-button:hover {
+            background-color: #059669; /* Darker green on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        /* Custom scrollbar styles for a cleaner look (optional) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
-    <!-- LPのヘッダーセクション -->
+    <!-- LP Header Section -->
+    <!-- Background is dark gray (bg-gray-900) to match corporate branding -->
     <header class="bg-gray-900 text-white p-6 text-center rounded-b-lg shadow-lg">
-        <div class="container-centered"> <!-- ヘッダーの内容を中央に配置 -->
+        <div class="container-centered"> <!-- Content centered within the header -->
+            <!-- Main Catchphrase - Larger and bolder -->
             <h1 class="text-4xl md:text-6xl font-extrabold mb-3 leading-tight">
                 夏季の波動、新店増減に悩む<br class="md:hidden">食品問屋の所長・社長へ。
             </h1>
+            <!-- Sub-catchphrase - Emphasizing the core value proposition -->
             <p class="text-xl md:text-3xl mb-4 leading-relaxed font-semibold">
                 机上の空論は終わり。元食品問屋が現場で培った『生きたノウハウ』と<br class="md:hidden">『ハイブリッド物流』の秘策で、
             </p>
+            <!-- Key benefit - Highlighted with a contrasting color -->
             <p class="text-3xl md:text-5xl font-extrabold text-yellow-300">
                 貴社の物流疲弊を利益に変える。
             </p>
         </div>
     </header>
 
-    <main class="container-centered p-4 md:p-8"> <!-- mainタグに中央寄せクラスを適用 -->
-        <!-- CTAボタン（ファーストビュー直下） -->
+    <main class="container-centered p-4 md:p-8"> <!-- Main content area, centered -->
+        <!-- Call To Action (CTA) Button - Immediately visible after the header -->
         <section class="my-8 text-center">
             <a href="【LINE公式アカウントの登録URL】" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg md:text-xl">
-                【無料】TSUNAGU代表が語る『攻めの物流』特別動画＋診断シートをLINEでプレゼント！
+                【無料】物流疲弊度診断シートをLINEでプレゼント！
             </a>
         </section>
 
-        <!-- ターゲットの「痛み」の明確化 -->
+        <!-- Section: Identifying Target's Pain Points -->
         <section class="my-12 p-6 bg-white rounded-lg shadow-md border border-gray-200">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
                 もしかして、こんなお悩み抱えていませんか？
@@ -72,7 +107,7 @@
             </p>
         </section>
 
-        <!-- TSUNAGUの提供価値 -->
+        <!-- Section: TSUNAGU's Value Proposition -->
         <section class="my-12 p-6 bg-gray-50 rounded-lg shadow-md border border-gray-200">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
                 TSUNAGUが提供する、現場から生まれた『攻めの物流』戦略
@@ -85,7 +120,7 @@
             </div>
         </section>
 
-        <!-- TSUNAGUの強み/選ばれる理由 -->
+        <!-- Section: Why Choose TSUNAGU -->
         <section class="my-12 p-6 bg-white rounded-lg shadow-md border border-gray-200">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
                 なぜ、今TSUNAGUが選ばれるのか？
@@ -98,11 +133,12 @@
             </div>
         </section>
 
-        <!-- 代表者メッセージ/ストーリー -->
+        <!-- Section: Representative's Message/Story -->
         <section class="my-12 p-6 bg-gray-50 rounded-lg shadow-md border border-gray-200">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
                 代表メッセージ：なぜ、私が物流コンサルを始めたのか
             </h2>
+            <!-- 画像または動画のプレースホルダーを削除 -->
             <p class="text-lg text-gray-700">
                 私自身、かつて食品問屋の現場で、物流の苦悩を経験してきました。夏季のアイス配送でドライバーが足りず、夜遅くまで自らハンドルを握ったこともあります。物流コストの高騰に頭を抱え、どうすれば利益を確保できるのか、眠れない夜を過ごしたことも一度や二度ではありません。
             </p>
@@ -113,27 +149,25 @@
                 株式会社TSUNAGU 代表取締役
             </p>
             <p class="mt-2 text-lg text-gray-700 text-right">
-                <!-- 代表者様の氏名 -->
+                <!-- Placeholder for Representative's Name -->
             </p>
         </section>
 
-        <!-- 成功事例 -->
+        <!-- Section: Success Story -->
         <section class="my-12 p-6 bg-white rounded-lg shadow-md border border-gray-200">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
-                『攻めの物流』成功事例：利益率〇〇%アップの秘策
+                『攻めの物流』成功事例：利益率<span class="text-blue-600">20%</span>アップの秘策
             </h2>
             <div class="space-y-6 text-lg text-gray-700">
                 <p class="font-bold">【事例：A社（食品卸）】</p>
                 <p><strong>課題:</strong> 夏季のアイス物量急増による配送コスト高騰と、新店オープン時のコース編成の非効率性。</p>
                 <p><strong>TSUNAGUの提案:</strong> 夏季とそれ以外の期間でコース編成を柔軟に変更する戦略を導入。また、物流会社との連携を強化し、カバーできないエリアは自社便で補完するハイブリッド体制を構築。</p>
-                <p><strong>成果:</strong> 物流コストを〇〇%削減し、年間利益率が〇〇%向上。新店へのスムーズな対応が可能になり、小売店からの評価も大幅にアップ。所長は社長からの評価を上げ、次のキャリアステップへと繋がりました。</p>
-                <div class="text-center my-6">
-                    <img src="https://placehold.co/600x300/e0e0e0/333333?text=成功事例グラフイメージ" alt="成功事例グラフイメージ" class="w-full max-w-xl mx-auto rounded-lg shadow-lg">
-                </div>
+                <p><strong>成果:</strong> 物流コストを<span class="text-blue-600">10%</span>削減し、年間利益率が<span class="text-blue-600">20%</span>向上。新店へのスムーズな対応が可能になり、小売店からの評価も大幅にアップ。所長は社長からの評価を上げ、次のキャリアステップへと繋がりました。</p>
+                <!-- 画像のプレースホルダーを削除 -->
             </div>
         </section>
 
-        <!-- お客様の声 -->
+        <!-- Section: Customer Testimonials -->
         <section class="my-12 p-6 bg-gray-50 rounded-lg shadow-md border border-gray-200">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
                 お客様の声
@@ -146,10 +180,10 @@
                     〇〇食品株式会社 所長 A様
                 </p>
             </div>
-            <!-- 他のお客様の声も追加可能 -->
+            <!-- More testimonials can be added here -->
         </section>
 
-        <!-- 最終CTA -->
+        <!-- Final Call To Action (CTA) Section -->
         <section class="my-12 p-6 bg-gray-900 text-white text-center rounded-lg shadow-lg">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">
                 貴社の物流課題、このまま放置しますか？<br>
@@ -159,7 +193,7 @@
                 まずは、あなたの物流疲弊度をチェック！
             </p>
             <a href="【LINE公式アカウントの登録URL】" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-5 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-lg md:text-2xl">
-                【無料】TSUNAGU代表が語る『攻めの物流』特別動画＋診断シートをLINEでプレゼント！
+                【無料】物流疲弊度診断シートをLINEでプレゼント！
             </a>
             <p class="mt-6 text-lg">
                 今すぐLINEに登録して、あなたの会社の未来を変える第一歩を踏み出しましょう。
@@ -167,8 +201,9 @@
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-white text-center p-6 rounded-t-lg">
-        <div class="container-centered"> <!-- フッターの内容を中央に配置 -->
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white text-center py-6 shadow-inner">
+        <div class="container-centered"> <!-- Footer content centered -->
             <p>&copy; 2024 株式会社TSUNAGU All Rights Reserved.</p>
         </div>
     </footer>
