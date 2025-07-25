@@ -11,28 +11,43 @@
         @import url("https://cdn.tailwindcss.com");
         body {
             font-family: 'Inter', sans-serif;
+            /* 全体の背景色 */
+            background-color: #f3f4f6; /* bg-gray-100 */
         }
-        /* メインコンテンツを中央に配置するためのスタイル */
-        .container {
-            max-width: 1024px; /* 最大幅を設定（md:text-5xlなどに合わせて調整） */
+        /* メインコンテンツとヘッダー、フッターを中央に配置するためのスタイル */
+        .container-centered {
+            max-width: 1024px; /* 最大幅を設定 */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem; /* p-4 md:p-8 に合わせて調整 */
+            padding-right: 1rem; /* p-4 md:p-8 に合わせて調整 */
+        }
+        /* レスポンシブなパディング調整 */
+        @media (min-width: 768px) { /* md breakpoint */
+            .container-centered {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
         }
     </style>
 </head>
 <body class="bg-gray-100">
     <!-- LPのヘッダーセクション -->
     <header class="bg-blue-600 text-white p-6 text-center rounded-b-lg shadow-lg">
-        <h1 class="text-3xl md:text-5xl font-bold mb-2 leading-tight">
-            夏季の波動、新店増減に悩む食品問屋の所長・社長へ。
-        </h1>
-        <p class="text-xl md:text-2xl mb-4 leading-relaxed">
-            机上の空論は終わり。元食品問屋が現場で培った『生きたノウハウ』と『ハイブリッド物流』の秘策で、
-        </p>
-        <p class="text-2xl md:text-3xl font-bold">
-            貴社の物流疲弊を利益に変える。
-        </p>
+        <div class="container-centered"> <!-- ヘッダーの内容を中央に配置 -->
+            <h1 class="text-3xl md:text-5xl font-bold mb-2 leading-tight">
+                夏季の波動、新店増減に悩む食品問屋の所長・社長へ。
+            </h1>
+            <p class="text-xl md:text-2xl mb-4 leading-relaxed">
+                机上の空論は終わり。元食品問屋が現場で培った『生きたノウハウ』と『ハイブリッド物流』の秘策で、
+            </p>
+            <p class="text-2xl md:text-3xl font-bold">
+                貴社の物流疲弊を利益に変える。
+            </p>
+        </div>
     </header>
 
-    <main class="container mx-auto p-4 md:p-8">
+    <main class="container-centered p-4 md:p-8"> <!-- mainタグに中央寄せクラスを適用 -->
         <!-- CTAボタン（ファーストビュー直下） -->
         <section class="my-8 text-center">
             <a href="【LINE公式アカウントの登録URL】" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
@@ -88,13 +103,7 @@
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
                 代表メッセージ：なぜ、私が物流コンサルを始めたのか
             </h2>
-            <div class="text-center mb-4">
-                <!-- ここに代表者様の動画を埋め込むか、画像を配置してください。 -->
-                <!-- 例1: YouTube動画の埋め込み -->
-                <!-- <iframe width="560" height="315" src="【代表者様のYouTube動画URL】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full max-w-xl mx-auto rounded-lg shadow-lg"></iframe> -->
-                <!-- 例2: 画像の配置 -->
-                <img src="https://placehold.co/600x338/e0e0e0/333333?text=代表者様の動画または画像" alt="代表者様の動画または画像" class="w-full max-w-xl mx-auto rounded-lg shadow-lg">
-            </div>
+            <!-- 画像または動画のプレースホルダーを削除 -->
             <p class="text-lg text-gray-700">
                 私自身、かつて食品問屋の現場で、物流の苦悩を経験してきました。夏季のアイス配送でドライバーが足りず、夜遅くまで自らハンドルを握ったこともあります。物流コストの高騰に頭を抱え、どうすれば利益を確保できるのか、眠れない夜を過ごしたことも一度や二度ではありません。
             </p>
@@ -160,7 +169,9 @@
     </main>
 
     <footer class="bg-gray-800 text-white text-center p-6 rounded-t-lg">
-        <p>&copy; 2024 株式会社TSUNAGU All Rights Reserved.</p>
+        <div class="container-centered"> <!-- フッターの内容を中央に配置 -->
+            <p>&copy; 2024 株式会社TSUNAGU All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
